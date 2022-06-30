@@ -1,0 +1,154 @@
+{
+    "cpu": 5,
+    "project": {
+        "projname": "taylor_nanopore_barcode2_run",
+        "projid": 8,
+        "projcode": "64bb9c...",
+        "projowner": "twiley1@nd.edu",
+        "projrunhost": "http://localhost"
+    },
+    "Download Fastq": {
+        "DoFastqDownload": "auto"
+    },
+    "Download SRA": {
+        "DoSRADownload": 0
+    },
+    "Count Fastq": {
+        "DoCountFastq": "auto",
+        "fastq_source": "nanopore"
+    },
+    "Quality Trim and Filter": {
+        "DoQC": 1,
+        "qc_phred_offset": 0,
+        "q": 7,
+        "min_L": 1000,
+        "avg_q": 0,
+        "n": 10,
+        "lc": 0.85,
+        "porechop": 1,
+        "polyA": 0,
+        "Send": 0,
+        "3end": 0
+    },
+    "Host Removal": {
+        "DoHostRemoval": 0,
+        "bwaMemOptions": "-T 50",
+        "similarity": 90  
+    },
+    "Assembly": {
+        "DoAssembly": 1,
+        "minContigSize": 200,
+        "assembler": "lrasm",
+        "idbaOptions": "--pre_correction --mink 31 --maxk 121 --step 20 --min_contig 200",
+        "SpadesAlgorithm": "default",
+        "megahit_preset": "meta",
+        "unicycler_mode": "normal",
+        "unicycler_min_lreads": 2000,
+        "lrasm_num_consensus": 3,
+        "lrasm_preset": "ont",
+        "lrasm_ec": 8,
+        "lrasm_algorithm": "miniasm"
+    },
+    "Reads Mapping To Contigs": {
+        "DoReadsMappingContigs": "auto",
+        "r2c_aligner": "minimap2",
+        "r2c_extract_unmapped": 0
+    },
+    "Reads Mapping To Reference": {
+        "DoReadsMappingReference": 0,
+        "r2g_aligner": "minimap2",
+        "r2g_max_clip": 150,
+        "r2g_min_mapq": 42,
+        "window_size": 1000,
+        "step_size": 200,
+        "MapUnmappedReads": 0,
+        "r2g_extract_mapped": 0,
+        "r2g_extract_unmapped": 0,
+        "r2g_get_consensus": 0,
+        "r2g_consensus_min_mapQ": 42,
+        "r2g_consensus_max_cov": 8000,
+        "r2g_consensus_alt_prop": 0.5,
+        "r2g_consensus_altIndel_prop": 0.5,
+        "r2g_consensus_min_cov": 5,
+        "r2g_consensus_min_baseQ": 5,
+        "r2g_consensus_disable_BAQ": 1,
+        "r2g_consensus_pcr_dedup": 1,
+        "r2g_consensus_homopolymer_filter": 0,
+        "r2g_consensus_strandbias_filter": 0,
+        "r2g_consensus_comp_opt": 0,
+        "r2g_consensus_varlog_opt": 0,
+        "r2g_variant_call": 0,
+        "r2g_variant_call_min_qual": 60,
+        "r2g_variant_call_ploidy": "diploid"
+    },
+    "Reads Taxonomy Classification": {
+        "DoReadsTaxonomy": 1,
+        "AllReads": 1,
+        "enabledTools": "metaphlan2",
+        "splitrim-minq": 7,
+        "custom-gottcha-genDB-b": "",
+        "custom-gottcha-speDB-b": "",
+        "custom-gottcha-strDB-b": "",
+        "custom-gottcha-genDB-v": "",
+        "custom-gottcha-speDB-v": "",
+        "custom-gottcha-strDB-v": "",
+        "custom-gottcha2-speDB-b": "",
+        "custom-gottcha2-genDB-v": "",
+        "custom-gottcha2-speDB-v": "",
+        "custom-bwa-db": "",
+        "custom-metaphlan-db": "",
+        "custom-kraken-db": "",
+        "custom-pangia-db": "",
+        "custom-diamond-db": ""
+    },
+    "Contigs Mapping To Reference": {
+        "DoContigMapping": "auto",
+        "identity": 85,
+        "MapUnmappedContigs": 0
+    },
+    "Variant Analysis": {
+        "DoVariantAnalysis": "auto"
+    },
+    "Contigs Taxonomy Classification": {
+        "DoContigsTaxonomy": 0
+    },
+
+    "Contigs Blast": {
+        "DoBlast": 0,
+        "BLAST_nr_DB": 0,
+        "BLAST_nt_DB": 0
+    },
+    "Contigs Annotation": {
+        "DoAnnotation": 1,
+        "kingdom": "Bacteria",
+        "contig_size_cut_for_annotation": 700,
+        "annotateProgram": "prokka",
+        "annotation_gcode": 11,
+        "annotation_evalue": "1e-09",
+        "DoKeggOmicsView": 1
+    },
+    "ProPhage Detection": {
+        "DoProPhageDetection": "auto"
+    },
+    "Contigs Binning": {
+        "DoBinning": 0,
+        "contig_size_cut_for_binning": 1000,
+        "binning-max-itr": 50,
+        "binning-prob": 0.9,
+        "binning-markerset": 107
+    },
+    "Binning CheckM": {
+        "DoCheckM": 0
+    },
+    "Primer Validation": {
+        "DoPrimerValidation": 0,
+        "maxMismatch": 1
+    },
+    "Generate JBrowse Tracks": {
+        "DoJBrowse": 1,
+        "JBrowse_bam_min_depth": 300
+    },
+    "HTML Report": {
+        "DoHTMLReport": 1
+    }
+}
