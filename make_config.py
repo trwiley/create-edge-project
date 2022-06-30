@@ -10,7 +10,7 @@ config_input = json.loads(config_data)
 config = configparser.ConfigParser()
 
 config['project'] = {"cpu": 5,
-        "projname": "taylor_nanopore_barcode2_run",
+        "projname": sys.argv[1],
         "projid": 8,
         "projcode": sys.argv[1],
         "projowner": "twiley1@nd.edu",
