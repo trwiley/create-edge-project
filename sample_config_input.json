@@ -1,6 +1,6 @@
 {
-    "cpu": 5,
     "project": {
+        "cpu": 5,
         "projname": "taylor_nanopore_barcode2_run",
         "projid": 8,
         "projcode": "64bb9c...",
