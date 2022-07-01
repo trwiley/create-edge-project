@@ -3,7 +3,8 @@
         "DoFastqDownload": "auto"
     },
     "Download SRA": {
-        "DoSRADownload": 0
+        "DoSRADownload": 0,
+        "SRA_id": ""
     },
     "Count Fastq": {
         "DoCountFastq": "auto",
@@ -17,6 +18,7 @@
         "avg_q": 0,
         "n": 10,
         "lc": 0.85,
+        "adapter": "",
         "porechop": 1,
         "polyA": 0,
         "Send": 0,
@@ -24,17 +26,23 @@
     },
     "Host Removal": {
         "DoHostRemoval": 0,
+        "Host": "",
         "bwaMemOptions": "-T 50",
         "similarity": 90  
     },
     "Assembly": {
         "DoAssembly": 1,
+        "assembledContigs": "",
+        "inputContigs": "",
         "minContigSize": 200,
         "assembler": "lrasm",
         "idbaOptions": "--pre_correction --mink 31 --maxk 121 --step 20 --min_contig 200",
         "SpadesAlgorithm": "default",
+        "SpadesPacbioFile": "",
+        "SpadesNanoporeFile": "",
         "megahit_preset": "meta",
         "unicycler_mode": "normal",
+        "unicycler_lreads_file": "",
         "unicycler_min_lreads": 2000,
         "lrasm_num_consensus": 3,
         "lrasm_preset": "ont",
@@ -44,15 +52,19 @@
     "Reads Mapping To Contigs": {
         "DoReadsMappingContigs": "auto",
         "r2c_aligner": "minimap2",
+        "r2c_aligner_options": "",
         "r2c_extract_unmapped": 0
     },
     "Reads Mapping To Reference": {
         "DoReadsMappingReference": 0,
         "r2g_aligner": "minimap2",
+        "r2g_aligner_options": "",
         "r2g_max_clip": 150,
+        "r2g_align_trim_bed_file": "",
         "r2g_min_mapq": 42,
         "window_size": 1000,
         "step_size": 200,
+        "reference": "",
         "MapUnmappedReads": 0,
         "r2g_extract_mapped": 0,
         "r2g_extract_unmapped": 0,
@@ -115,7 +127,10 @@
         "kingdom": "Bacteria",
         "contig_size_cut_for_annotation": 700,
         "annotateProgram": "prokka",
+        "annotateSourceGBK": "",
         "annotation_gcode": 11,
+        "customHMM": "",
+        "customProtein": "",
         "annotation_evalue": "1e-09",
         "DoKeggOmicsView": 1
     },
@@ -127,14 +142,16 @@
         "contig_size_cut_for_binning": 1000,
         "binning-max-itr": 50,
         "binning-prob": 0.9,
-        "binning-markerset": 107
+        "binning-markerset": 107,
+        "binning-abund-file": ""
     },
     "Binning CheckM": {
         "DoCheckM": 0
     },
     "Primer Validation": {
         "DoPrimerValidation": 0,
-        "maxMismatch": 1
+        "maxMismatch": 1,
+        "primer": ""
     },
     "Generate JBrowse Tracks": {
         "DoJBrowse": 1,
