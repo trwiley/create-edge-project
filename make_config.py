@@ -11,6 +11,7 @@ config = configparser.ConfigParser()
 
 config['project'] = {"cpu": 5,
         "projname": sys.argv[1],
+        "projdesc": "",
         "projid": 8,
         "projcode": sys.argv[1],
         "projowner": "twiley1@nd.edu",
