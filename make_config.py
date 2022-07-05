@@ -8,6 +8,7 @@ with open('sample_config_input.json', 'r') as config_input_file:
 config_input = json.loads(config_data)
 
 config = configparser.ConfigParser()
+config.optionxform = str
 
 config['project'] = {"cpu": 5,
         "projname": sys.argv[1],
