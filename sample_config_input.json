@@ -21,13 +21,13 @@
         "adapter": "",
         "porechop": 1,
         "polyA": 0,
-        "Send": 0,
+        "5end": 0,
         "3end": 0
     },
     "Host Removal": {
         "DoHostRemoval": 0,
         "Host": "",
-        "bwaMemOptions": "-T 50",
+        "bwaMemOptions": "'-T 50'",
         "similarity": 90  
     },
     "Assembly": {
@@ -36,7 +36,7 @@
         "inputContigs": "",
         "minContigSize": 200,
         "assembler": "lrasm",
-        "idbaOptions": "--pre_correction --mink 31 --maxk 121 --step 20 --min_contig 200",
+        "idbaOptions": "'--pre_correction --mink 31 --maxk 121 --step 20 --min_contig 200'",
         "SpadesAlgorithm": "default",
         "SpadesPacbioFile": "",
         "SpadesNanoporeFile": "",
