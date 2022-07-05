@@ -11,7 +11,7 @@ config = configparser.ConfigParser()
 config.optionxform = str
 
 config['project'] = {"cpu": 5,
-        "projname": sys.argv[1],
+        "projname": sys.argv[1][0:5],
         "projdesc": "",
         "projid": 8,
         "projcode": sys.argv[1],
@@ -22,4 +22,4 @@ for key in config_input:
     config[key] = config_input[key]
 
 with open(f'{sys.argv[1]}/config.txt', 'w') as configfile:
-    config.write(configfile)
+    config.write(fileobject=configfile, space_around_delimiters=False)
