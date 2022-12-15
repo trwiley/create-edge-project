@@ -15,7 +15,7 @@ config['project'] = {"cpu": 5,
         "projdesc": "",
         "projid": 8,
         "projcode": sys.argv[1],
-        "projowner": "twiley1@nd.edu",
+        "projowner": "EMAIL",
         "projrunhost": "http://localhost"}
 
 for key in config_input:
